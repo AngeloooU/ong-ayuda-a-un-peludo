@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#menu {
+    height:100%;
+    width: 20%;
+    float: left;
+    background-color: black;
+
+}
+
+a.menu {
+    display: block;
+    padding-left: 40px;
+    padding-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+a.menu:hover {
+    color:lightgreen;
+    text-decoration: underline;
+}
+
+a.actual {
+    color: blue;
+}
+
+#contenido {
+    height:100%;
+    width: 80%;
+    float: right;
+    background-color: white;
+}
+
+#contenido * {
+    margin-left: 20px;
+}
+
+table.animales {
+    width: 50%;
+    margin: auto;
+    border: 1px solid darkblue;
+}
+
+table.animales img {
+    width: 200px;
+    height: auto;
+}
