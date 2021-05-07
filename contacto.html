@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>ONG Ayuda a un peludo</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/validaciones.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/formulario-contacto.js"></script>
+    </head>
+    <body>
+        <div class="container bg-light">
+            <div class="jumbotron">
+                <h1>ONG Ayuda a un peludo</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
+                </p>
+            </div>
+            <nav class="navbar navbar-expand-md bg-light">
+                
+                <a class="navbar-brand" href="#">Logo</a>
+
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Mascotas
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Perros</a>
+                            <a class="dropdown-item" href="#">Gatos</a>
+                        </div>
+                        </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section>
+                <h2>Contacto</h2>
+                <div class="form-group">
+                    <form id="formulario-contacto" name="formularioContacto" action="formulario-enviado.html" method="POST" >
+
+                        <label for="fieldTipoContacto">Tipo Contacto:</label>
+                        <select id="fieldTipoContacto" name="tipoContacto" class="form-control">
+                            <option value="" >-- seleccione un tipo --</option>
+                            <option value="felicitaciones">Felicitaciones</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="reclamo">Reclamo</option>
+                        </select>
+
+                        <label for="fieldNombre">
+                            Nombre:
+                            <div class="alert alert-danger" role="alert"></div> 
+                        </label>
+                                               
+                        <input id="fieldNombre" class="form-control" type="text" name="nombre" />
+                        
+                        <label for="fieldEmail">Email:
+                            <div class="alert alert-danger" role="alert"></div> 
+                        </label>
+                        <input id="fieldEmail" class="form-control" type="email" name="email" />
+
+                        <label for="fieldFechaNacimiento">Fecha Nacimiento:
+                            <div class="alert alert-danger" role="alert"></div> 
+                        </label>
+                        <input id="fieldFechaNacimiento" class="form-control" type="date" name="fecha_nacimiento" />
+
+                        <label for="fieldComentario">Comentario:
+                            <div class="alert alert-danger" role="alert"></div> 
+                        </label>
+                        <textarea id="fieldComentario" class="form-control" name="comentario"></textarea>
+
+                        <input type="submit" class="btn btn-success" name="submit" value="Enviar" />
+                        <input type="reset" class="btn btn-info" name="reset" value="Limpiar" />
+                    </form>
+                </div>
+            </section>            
+        </div>
+    </body>
+</html>
