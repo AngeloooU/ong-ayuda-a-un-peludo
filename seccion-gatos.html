@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>ONG Ayuda a un Peludo: Sección Gatos</title>
+        <title>ONG Ayuda a un peludo - Gatos</title>
         <meta charset="UTF-8" />
-        <link type="text/css" rel="stylesheet" href="css/estilo.css" media="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-
-        <nav id="menu">
-            <a class="menu" href="index.html" title="Inicio" >Inicio</a>
-            <a class="menu" href="#" title="Nosotros" >Nosotros</a>
-            <a class="menu" href="seccion-perros.html" title="Perros" >Perros</a>
-            <a class="menu actual" href="seccion-gatos.html" title="Gatos" >Gatos</a>
-            <a class="menu" href="#" title="Contacto" >Contacto</a>
-        </nav>
-
-        <div id="contenido">
-            <section id="primera">
-                <h1>ONG Ayuda a un Peludo</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
+        <div class="container bg-light">
+            <div class="jumbotron">
+                
+                <h1 class="text-center">
+                    <img src="img/logo.png" width="200" alt="logo"/>
+                    <span class="text-nowrap">ONG Ayuda a un Peludo</span>
+                </h1>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis,
+                    earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, 
+                    repellat vitae!
                 </p>
-            </section>
+            </div>
+            <nav class="navbar navbar-expand-md bg-light">
+                
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" width="80" alt="Logo" />
+                </a>
 
-            <section id="segunda" class="detalle"> 
-                <h2>Sección Gatos</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora dicta amet odit nulla, eaque fugiat adipisci aut inventore consequuntur, quisquam nisi ad commodi. Sed placeat explicabo reprehenderit nemo, ex eveniet.
-                </p>
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
 
-                <table class="animales">
-                    <tr>
-                        <td>
-                            <img src="img/perros/cachupin.jpg" alt="Cachupín"/>
-                        </td>
-                        <td>
-                            Cachupín
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/perros/campeon.jpg" alt="Campeón"/>
-                        </td>
-                        <td>
-                            Campeón
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/perros/keeper.jpg" alt="Keeper"/>
-                        </td>
-                        <td>
-                            Keeper
-                        </td>
-                    </tr>
-                </table>
-            </section>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Mascotas
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="seccion-perros.html">Perros</a>
+                            <a class="dropdown-item active" href="seccion-gatos.html">Gatos</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="row">
+                <div class="col-12">
+                    <section>
+                        <h2>
+                            Gatos
+                        </h2> 
+                    </section>
+                </div>
+            </div>
+            <div class="row bg-dark">
+                <div class="col-12 text-center">
+                    <footer class="text-warning">
+                        lorem ipsum
+                    </footer>
+                </div>
+            </div>
         </div>
     </body>
 </html>
