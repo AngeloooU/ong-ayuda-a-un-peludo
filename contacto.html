@@ -10,15 +10,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="js/formulario-contacto.js"></script>
+                                                                                                  
     </head>
     <body>
         <div class="container bg-light">
             <div class="jumbotron">
-                <h1>ONG Ayuda a un peludo</h1>
-                <p>
+                
+                <h1 class="text-center">
+                    <img src="img/logo.png" width="200" alt="logo"/>
+                    <span class="text-nowrap">ONG Ayuda a un Peludo</span>
+                </h1>
+                <p class="text-justify">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
                 </p>
             </div>
+            
             <nav class="navbar navbar-expand-md bg-light">
                 
                 <a class="navbar-brand" href="#">Logo</a>
@@ -51,38 +57,77 @@
                 <div class="form-group">
                     <form id="formulario-contacto" name="formularioContacto" action="formulario-enviado.html" method="POST" >
 
-                        <label for="fieldTipoContacto">Tipo Contacto:</label>
-                        <select id="fieldTipoContacto" name="tipoContacto" class="form-control">
-                            <option value="" >-- seleccione un tipo --</option>
-                            <option value="felicitaciones">Felicitaciones</option>
-                            <option value="sugerencia">Sugerencia</option>
-                            <option value="reclamo">Reclamo</option>
-                        </select>
-
-                        <label for="fieldNombre">
-                            Nombre:
-                            <div class="alert alert-danger" role="alert"></div> 
-                        </label>
-                                               
-                        <input id="fieldNombre" class="form-control" type="text" name="nombre" />
-                        
-                        <label for="fieldEmail">Email:
-                            <div class="alert alert-danger" role="alert"></div> 
-                        </label>
-                        <input id="fieldEmail" class="form-control" type="email" name="email" />
-
-                        <label for="fieldFechaNacimiento">Fecha Nacimiento:
-                            <div class="alert alert-danger" role="alert"></div> 
-                        </label>
-                        <input id="fieldFechaNacimiento" class="form-control" type="date" name="fecha_nacimiento" />
-
-                        <label for="fieldComentario">Comentario:
-                            <div class="alert alert-danger" role="alert"></div> 
-                        </label>
-                        <textarea id="fieldComentario" class="form-control" name="comentario"></textarea>
-
-                        <input type="submit" class="btn btn-success" name="submit" value="Enviar" />
-                        <input type="reset" class="btn btn-info" name="reset" value="Limpiar" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="fieldTipoContacto">
+                                    <span>
+                                        Tipo:<div class="alert alert-danger" role="alert"></div>
+                                    </span>
+                                </label>
+                                <select id="fieldTipoContacto" name="tipoContacto" class="form-control">
+                                    <option value="" >-- seleccione un tipo --</option>
+                                    <option value="felicitaciones">Felicitaciones</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="reclamo">Reclamo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="fieldNombre">
+                                    <span>
+                                        Nombre:<div class="alert alert-danger" role="alert"></div> 
+                                    </span>
+                                </label>                       
+                                <input id="fieldNombre" class="form-control" type="text" name="nombre" />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="fieldEmail">
+                                    <span>
+                                        Email:
+                                        <div class="alert alert-danger" role="alert"></div> 
+                                    </span>
+                                </label>
+                                <input id="fieldEmail" class="form-control" type="email" name="email" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="fieldFechaNacimiento">
+                                    <span>
+                                        Fecha Nacimiento:
+                                        <div class="alert alert-danger" role="alert"></div> 
+                                    </span>
+                                </label>
+                                <input id="fieldFechaNacimiento" class="form-control" type="date" name="fecha_nacimiento" />
+                            </div>                            
+                            <div class="col-md-6">
+                                <label for="fieldRut">
+                                    <span>
+                                        Rut:
+                                        <div class="alert alert-danger" role="alert"></div> 
+                                    </span>
+                                </label>
+                                <input id="fieldRut" class="form-control" type="text" name="rut" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="fieldComentario">
+                                    <span>
+                                        Comentario:
+                                        <div class="alert alert-danger" role="alert"></div> 
+                                    </span>
+                                </label>
+                                <textarea id="fieldComentario" class="form-control" name="comentario"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-success" name="submit">Enviar</button>
+                                <button type="reset" class="btn btn-info" name="reset">Limpiar</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </section>            

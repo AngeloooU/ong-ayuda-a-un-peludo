@@ -2,3 +2,8 @@
 .error-campo-formulario {
     border: 2px solid red;
 }
+
+span > div.alert {
+    display: inline;
+    margin-top: 25px;
+}

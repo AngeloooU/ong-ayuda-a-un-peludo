@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#menu {
+    height:100%;
+    width: 20%;
+    float: left;
+}
+
+#contenido {
+    height:100%;
+    width: 80%;
+    float: right;
+}

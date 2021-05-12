@@ -1,0 +1,23 @@
+
+#menu {
+    background-color: black;
+}
+
+a.menu {
+    display: block;
+    padding-left: 40px;
+    padding-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+a.menu:hover {
+    color:lightgreen;
+    text-decoration: underline;
+}
+
+a.actual {
+    color: orange;
+    text-decoration: underline;
+}

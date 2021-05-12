@@ -8,17 +8,31 @@ $(document).ready(function(){
     // función encargada de verificar si el valor del parámetro fieldValue
     // es vacío y mostrar o esconder, según corresponda, el mensaje en el
     // div de alerta asociado al campo indicado en el parámetro fieldName.
-    function validarCampoVacio(fieldValue, fieldName) {
+    function validarCampoVacio(fieldValue, fieldId) {
+        
         if (fieldValue.trim().length == 0) {
-            $("#"+fieldName).addClass("error-campo-formulario");
-            $("label[for='"+fieldName+"'] > div.alert").html("El campo no puede ser vacío");
-            $("label[for='"+fieldName+"'] > div.alert").show();
-            $("label[for='"+fieldName+"'] > div.alert").fadeOut( 5000 )
+            $("#"+fieldId).addClass("error-campo-formulario");
+            $("label[for='"+fieldId+"'] div.alert").html("El campo no puede ser vacío");
+            $("label[for='"+fieldId+"'] div.alert").show();
+            $("label[for='"+fieldId+"'] div.alert").fadeOut( 5000 )
+
+            return false;
         } else {
-            $("#"+fieldName).removeClass("error-campo-formulario");
-            $("label[for='"+fieldName+"'] > div.alert").hide();
+            $("#"+fieldId).removeClass("error-campo-formulario");
+            $("label[for='"+fieldId+"'] div.alert").hide();
+
+            return true;
         }
     }
+
+    // asocia en el evento blur del elemento de formulario con id "fieldTipoContacto" la llamada a la
+    // función de validar si el campo es vacío.
+    $("#fieldTipoContacto").change(function(){
+        valorIngresado = $(this).val();
+        console.log("No ha seleccionado un tipo de contacto: '"+valorIngresado+"'");
+
+        validarCampoVacio(valorIngresado, "fieldTipoContacto");
+    });
 
     // asocia en el evento blur del elemento de formulario con id "fieldNombre" la llamada a la
     // función de validar si el campo es vacío.
@@ -33,7 +47,7 @@ $(document).ready(function(){
     // función de validar si el campo es vacío.
     $("#fieldEmail").blur(function(){
         valorIngresado = $(this).val();
-        console.log("El usuario ha dejado el campo nombre con el valor: '"+valorIngresado+"'");
+        console.log("El usuario ha dejado el campo e-mail con el valor: '"+valorIngresado+"'");
 
         validarCampoVacio(valorIngresado, "fieldEmail");
     });
@@ -42,19 +56,48 @@ $(document).ready(function(){
     // función de validar si el campo es vacío.
     $("#fieldFechaNacimiento").blur(function(){
         valorIngresado = $(this).val();
-        console.log("El usuario ha dejado el campo nombre con el valor: '"+valorIngresado+"'");
+        console.log("El usuario ha dejado el campo fechaNacimiento con el valor: '"+valorIngresado+"'");
 
         validarCampoVacio(valorIngresado, "fieldFechaNacimiento");
+    });
+
+    // asocia en el evento blur del elemento de formulario con id "fieldRut" la llamada a la
+    // función de validar si el campo es vacío.
+    $("#fieldRut").blur(function(){
+        valorIngresado = $(this).val();
+        console.log("El usuario ha dejado el campo RUT vacío: + '"+valorIngresado+"'");
+
+        validarCampoVacio(valorIngresado, "fieldRut");
     });
 
     // asocia en el evento blur del elemento de formulario con id "fieldComentario" la llamada a la
     // función de validar si el campo es vacío.
     $("#fieldComentario").blur(function(){
         valorIngresado = $(this).val();
-        console.log("El usuario ha dejado el campo nombre con el valor: '"+valorIngresado+"'");
+        console.log("El usuario ha dejado el campo comentario con el valor: '"+valorIngresado+"'");
 
         validarCampoVacio(valorIngresado, "fieldComentario");
     });
+
+    $(":submit").click(function(event) {
+        error = false;
+
+        $("input, textarea, select").each(function() {
+            value = $(this).val();
+            fieldId = $(this).attr("id");
+
+            if (!validarCampoVacio(value, fieldId)) {
+                error = true;
+            }
+        })
+
+        if (error) {
+            event.preventDefault();
+            return false;
+        }
+
+        return true;
+    })
 });
 
 
