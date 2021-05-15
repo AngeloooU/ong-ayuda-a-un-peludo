@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     // ocultar todos los div que tengan class "alert" y se encuentren
     // dentro de un elemento cuyo id es "formulario-contacto".
-    $("#formulario-contacto div.alert").hide();
+    $("#formulario-contacto span.alert").hide();
 
     // función encargada de verificar si el valor del parámetro fieldValue
     // es vacío y mostrar o esconder, según corresponda, el mensaje en el
@@ -12,14 +12,14 @@ $(document).ready(function(){
         
         if (fieldValue.trim().length == 0) {
             $("#"+fieldId).addClass("error-campo-formulario");
-            $("label[for='"+fieldId+"'] div.alert").html("El campo no puede ser vacío");
-            $("label[for='"+fieldId+"'] div.alert").show();
-            $("label[for='"+fieldId+"'] div.alert").fadeOut( 5000 )
+            $("label[for='"+fieldId+"'] span.alert").html("El campo no puede ser vacío");
+            $("label[for='"+fieldId+"'] span.alert").show();
+            $("label[for='"+fieldId+"'] span.alert").fadeOut( 5000 )
 
             return false;
         } else {
             $("#"+fieldId).removeClass("error-campo-formulario");
-            $("label[for='"+fieldId+"'] div.alert").hide();
+            $("label[for='"+fieldId+"'] span.alert").hide();
 
             return true;
         }
