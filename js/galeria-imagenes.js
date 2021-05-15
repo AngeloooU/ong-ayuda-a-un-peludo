@@ -6,15 +6,18 @@ function generar_galeria_imagenes(
     spinerPrincipalHTML += "<thead>";
     spinerPrincipalHTML += "    <tr>";
     spinerPrincipalHTML += "        <th colspan=\""+numeroColumnasPorFila+"\">";
-    spinerPrincipalHTML += "            <div class=\"text-center\">";
-    spinerPrincipalHTML += "                <div id=\"ajax-loader\" class=\"spinner-border text-info\"></div>";
-    spinerPrincipalHTML += "            </div>";
+    spinerPrincipalHTML += "            <div class=\"progress\" style=\"height:32px;\">"
+    spinerPrincipalHTML += "                <div id=\"barra-progreso\" class=\"progress-bar\" style=\"width:0%; height:32px;\">0%</div>"
+    spinerPrincipalHTML += "            </div>"
     spinerPrincipalHTML += "        </th>";
     spinerPrincipalHTML += "    </tr>";
     spinerPrincipalHTML += "</thead> ";   
 
     $(selectorTablaHTML).append(spinerPrincipalHTML);
     $(selectorTablaHTML).append("<tbody></tbody>");
+
+    var incrementoBarraProgreso = Math.floor(100/(numeroTotalImagenes));
+    var avanceBarraProgreso = 0;
 
     $.get(url, function(response) { 
         
@@ -34,6 +37,7 @@ function generar_galeria_imagenes(
 
             var img = new Image();
             img.src = element.url;
+
             img.onload = function() {
                                                
                 registroHTML = "<td class=\"text-center\">";
@@ -44,16 +48,19 @@ function generar_galeria_imagenes(
                 registroHTML += "    </button>"
                 registroHTML += "</td>";
 
-                var registro = $(registroHTML).hide().fadeIn(2000);
-                console.log("agregando el gato #"+index+", url: "+element.url);
+                var registro = $(registroHTML).hide();
+
                 $(filas[Math.floor(index/numeroColumnasPorFila)]).append(registro);
                 $("#ajax-loader-img-"+element.id).hide();
 
                 if (contadorImagenesCargadas == (numeroTotalImagenes -1)) {
-                    $("#ajax-loader").addClass("invisible");                 
+                    $(selectorTablaHTML + " td").fadeIn(2000);   
+                    console.log("Galería de imagenes completada")                 
+                    actualizarBarraProgreso(100);            
                 } else {
-                    console.log("Incrementando contador de imagenes listas: "+contadorImagenesCargadas)
                     contadorImagenesCargadas++;
+                    avanceBarraProgreso += incrementoBarraProgreso;
+                    actualizarBarraProgreso(avanceBarraProgreso);
                 }
             }
         });
@@ -91,4 +98,13 @@ function btnAction(identificadorImagen) {
             };               
         });
     });
+}
+
+function actualizarBarraProgreso(porcentaje) {
+    $("#barra-progreso").css("width", porcentaje+"%");
+    $("#barra-progreso").html(porcentaje+"%");
+
+    if (porcentaje == 100) {
+        $("#barra-progreso").parent().fadeOut(2000);
+    }
 }

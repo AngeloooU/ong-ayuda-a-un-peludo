@@ -10,9 +10,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container bg-light">
-            <div class="jumbotron">
-                
+        <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
+            <header class="jumbotron">              
                 <h1 class="text-center">
                     <img src="img/logo.png" width="200" alt="logo"/>
                     <span class="text-nowrap">ONG Ayuda a un Peludo</span>
@@ -20,7 +19,7 @@
                 <p class="text-justify">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
                 </p>
-            </div>
+            </header>
             <nav class="navbar navbar-expand-md bg-light">
                 
                 <a class="navbar-brand" href="#">
@@ -50,34 +49,40 @@
                     </li>
                 </ul>
             </nav>
-
-            <div class="row">
-                <div class="col-6">
-                    <section>
-                        <h2>Integrantes: </h2>
-                        <ul>
-                            <li>Lorem ipsum uno</li>
-                            <li>Lorem ipsum Dos</li>
-                            <li>Lorem ipsum tres</li>
-                        </ul>
-                    </section>
+            <main class="flex-fill">
+                <div class="row">
+                    <div class="col-6">
+                        <section>
+                            <h2>Integrantes: </h2>
+                            <ul>
+                                <li>Lorem ipsum uno</li>
+                                <li>Lorem ipsum Dos</li>
+                                <li>Lorem ipsum tres</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="col-6">
+                        <section>
+                            <h2>
+                                <a href="seccion-perros.html" title="Perros">
+                                    <img src="img/seccion-perros.jpg" title="Perros" alt="Perros" class="rounded-circle img-thumbnail" width="300"  />
+                                </a>
+                                <a href="seccion-gatos.html" title="Gatos">
+                                    <img src="img/seccion-gatos.jpeg" title="Gatos" alt="Gatos"  class="rounded-circle img-thumbnail" />
+                                </a>
+                            </h2> 
+                        </section>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <section>
-                        <h2>
-                            <img src="img/seccion-perros.jpg" title="Perros" alt="Perros" class="rounded-circle img-thumbnail" width="300"  />
-                            <img src="img/seccion-gatos.jpeg" title="Gatos" alt="Gatos"  class="rounded-circle img-thumbnail" />
-                        </h2> 
-                    </section>
+            </main>
+            <footer>
+                <div class="row bg-dark">
+                    <div class="col-12 text-center text-warning">
+                            Programación Web<br/>
+                            Instituto Profesional Duoc UC
+                    </div>
                 </div>
-            </div>
-            <div class="row bg-dark">
-                <div class="col-12 text-center">
-                    <footer class="text-warning">
-                        lorem ipsum
-                    </footer>
-                </div>
-            </div>
-        </div>
+            </footer>
+        </div>        
     </body>
 </html>
