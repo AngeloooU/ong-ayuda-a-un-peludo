@@ -106,5 +106,5 @@ function actualizarBarraProgreso(porcentaje) {
 
     if (porcentaje == 100) {
         $("#barra-progreso").parent().fadeOut(2000);
-    }
+    } 
 }
