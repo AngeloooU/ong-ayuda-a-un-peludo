@@ -41,7 +41,7 @@ function generar_galeria_imagenes(
             img.onload = function() {
                                                
                 registroHTML = "<td class=\"text-center\">";
-                registroHTML += "    <img id=\"imagen-"+element.id+"\" src=\""+element.url+"\" class=\"img-thumbnail\" style=\"width:204px;height:auto;\" /><br/>";                
+                registroHTML += "    <img id=\"imagen-"+element.id+"\" src=\""+element.url+"\" class=\"img-thumbnail\" style=\"width:200px;height:150px;\" /><br/>";                
                 registroHTML += "    <button class=\"btn btn-info\" onclick=\"javascript:btnAction('"+element.id+"');\"  >"
                 registroHTML += "       <span id=\"ajax-loader-img-"+element.id+"\" class=\"spinner-border spinner-border-sm\"></span>"
                 registroHTML += "       "+textoBoton
