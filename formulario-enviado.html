@@ -12,13 +12,13 @@
         <script src="js/formulario-contacto.js"></script>
     </head>
     <body>
-        <div class="container bg-light">
-            <div class="jumbotron">
+        <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
+            <header class="jumbotron">
                 <h1>ONG Ayuda a un peludo</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
                 </p>
-            </div>
+            </header>
             <nav class="navbar navbar-expand-md bg-light">
                 
                 <a class="navbar-brand" href="#">Logo</a>
@@ -44,15 +44,24 @@
                     <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
-            </nav>
-
-            <section>
-                <h2>Contacto</h2>
-                
-                <div class="alert alert-success" role="alert">
-                    Formulario enviado exitosamente
-                </div> 
-            </section>            
+            </nav>            
+            <main class="flex-fill">
+                <section>
+                    <h2>Contacto</h2>
+                    
+                    <div class="alert alert-success" role="alert">
+                        Formulario enviado exitosamente
+                    </div> 
+                </section> 
+            </main>
+            <footer>
+                <div class="row bg-dark">
+                    <div class="col-12 text-center text-warning">
+                            Programación Web<br/>
+                            Instituto Profesional Duoc UC
+                    </div>
+                </div>
+            </footer>           
         </div>
     </body>
 </html>

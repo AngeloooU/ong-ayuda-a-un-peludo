@@ -8,11 +8,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/galeria-imagenes.js"></script>
         <script src="js/seccion-gatos.js"></script>
     </head>
     <body>
-        <div class="container bg-light">
-            <div class="jumbotron">
+        <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
+            <header class="jumbotron">
                 
                 <h1 class="text-center">
                     <img src="img/logo.png" width="200" alt="logo"/>
@@ -24,7 +25,7 @@
                     earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, 
                     repellat vitae!
                 </p>
-            </div>
+            </header>
             <nav class="navbar navbar-expand-md bg-light">
                 
                 <a class="navbar-brand" href="#">
@@ -54,23 +55,29 @@
                     </li>
                 </ul>
             </nav>
-
-            <div class="row">
-                <div class="col-12">
-                    <section>
-                        <h2>
-                            Gatos
-                        </h2> 
-                    </section>
+            <main class="flex-fill">            
+                <div class="row">
+                    <div class="col-12">
+                        <section>
+                            <h2>
+                                Gatos
+                            </h2> 
+                            
+                            <table  id="lista-gatos" class="table text-center">
+                                
+                            </table>
+                        </section>
+                    </div>
                 </div>
-            </div>
-            <div class="row bg-dark">
-                <div class="col-12 text-center">
-                    <footer class="text-warning">
-                        lorem ipsum
-                    </footer>
+            </main>
+            <footer>
+                <div class="row bg-dark">
+                    <div class="col-12 text-center text-warning">
+                            Programación Web<br/>
+                            Instituto Profesional Duoc UC
+                    </div>
                 </div>
-            </div>
+            </footer>   
         </div>
     </body>
 </html>
